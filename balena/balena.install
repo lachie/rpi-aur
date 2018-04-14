@@ -1,0 +1,6 @@
+
+post_install() {
+	if [[ -f /lib/libdevmapper.so.1.02 ]] && [[ ! -f /lib/libdevmapper.so.1.02.1 ]]; then
+		ln -s /lib/libdevmapper.so.1.02 /lib/libdevmapper.so.1.02.1
+	fi
+}
